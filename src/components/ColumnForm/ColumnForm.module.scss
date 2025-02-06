@@ -1,0 +1,47 @@
+.columnForm {
+    padding:10px;
+    span {
+        margin:10px;
+    }
+    @media (max-width:768px){
+        flex-wrap:wrap;
+        justify-content: center;
+        input{
+            width: 100%;
+            margin-top:10px;
+        }
+        button{
+            width:auto;
+            display:block;
+            margin: 10px auto 0 auto;
+        }
+        span {
+            display: block;
+            text-align: center;
+            width:100%;
+            margin:0;
+            margin-bottom: 5px;
+        }
+    }
+    @media (max-width:480px){
+        flex-wrap:wrap;
+        justify-content: center;
+        input{
+            width: 100%;
+            margin-top:10px;
+        }
+        button{
+            width:auto;
+            display:block;
+            margin: 10px auto 0 auto;
+        }
+        span {
+            display: block;
+            text-align: center;
+            width:100%;
+            margin:0;
+            margin-bottom: 5px;
+        }
+    }
+    
+}
