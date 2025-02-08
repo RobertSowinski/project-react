@@ -3,6 +3,7 @@ import styles from "./SearchForm.module.scss";
 import Button from "../Button/Button.js";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { updateSearchString } from "../../redux/store";
 
 
 const SearchForm = () => {
@@ -15,7 +16,7 @@ const SearchForm = () => {
 
     const handleSearch = (e) => {
         e.preventDefault();
-        dispatch({ type: 'UPDATE_SEARCHSTRING', payload: searchInput });
+        dispatch(updateSearchString(searchInput));
     };
     return (
         <form onSubmit={handleSearch} className={styles.searchForm}>
