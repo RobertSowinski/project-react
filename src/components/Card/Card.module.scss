@@ -10,4 +10,13 @@
     display: flex;
     justify-content: space-between;
     font-weight: bold;
+
+    i {
+        font-size: 24px;
+        cursor: pointer;
+        &.active {
+          color: gold;
+          transform: scale(1.2);
+        }
+    }
 }
