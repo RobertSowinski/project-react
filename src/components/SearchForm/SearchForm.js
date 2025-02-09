@@ -4,10 +4,12 @@ import Button from "../Button/Button.js";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { updateSearchString } from "../../redux/store";
+import { useSelector } from "react-redux";
 
 
 const SearchForm = () => {
-    const [searchInput, setSearchInput] = useState('');
+    const searchString=useSelector(state=>state.searchString);
+    const [searchInput, setSearchInput] = useState(searchString);
     const dispatch = useDispatch();
 
     const handleInputChange = (e) => {

@@ -22,6 +22,11 @@ export const getFilteredCards = createSelector(
     .filter(card => card.columnId === columnId && strContains(card.title.toLowerCase(), searchString.toLowerCase()))
 );
 
+export const getListById = ({ lists }, listId) => lists.find(list => list.id === listId);
+export const getColumnsByList = ({columns}, listId) => columns.filter(column =>column.listId===listId);
+export const getAllList = (state) => state.lists;
+export const addList = payload => ({ type: 'ADD_LIST', payload });
+
 const reducer = (state, action) => {
     switch(action.type) {
         case 'ADD_COLUMN':
@@ -30,6 +35,8 @@ const reducer = (state, action) => {
             return { ...state, cards: [...state.cards, { ...action.payload, id: shortid() }]};
         case 'UPDATE_SEARCHSTRING':
             return { ...state, searchString: action.payload };
+        case 'ADD_LIST':
+            return { ...state, lists: [...state.lists, { ...action.payload, id: shortid() }]};
         default:
             return state;
     }

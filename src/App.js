@@ -5,6 +5,8 @@ import About from './components/About/About';
 import Favourite from './components/Favourite/Favourite';
 import {Routes, Route} from 'react-router-dom';
 import BadAddress from './components/BadAddress/BadAddress';
+import List from './components/List/List';
+
 
 
 const App = () => {
@@ -17,6 +19,7 @@ const App = () => {
         <Route path="/about" element={<About/>}/>
         <Route path="/favourite" element={<Favourite/>}/>
         <Route path="*" element={<BadAddress/>}/>
+        <Route path="/list/:listId" element={<List/>}/>
       </Routes>
     </Container>
   </main>
