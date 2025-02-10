@@ -3,7 +3,7 @@ import styles from "./SearchForm.module.scss";
 import Button from "../Button/Button.js";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { updateSearchString } from "../../redux/store";
+import { updateSearchString } from "../../redux/searchStringRedux.js";
 import { useSelector } from "react-redux";
 
 

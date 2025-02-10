@@ -46,7 +46,8 @@ const initialState = {
     title: 'Test list',
     description: 'Lorem Ipsum'
    }
-   ]
+   ],
+   searchString: ''
   };
   
   export default initialState;
